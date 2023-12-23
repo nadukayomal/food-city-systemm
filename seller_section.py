@@ -104,21 +104,54 @@ class SellerSection:
             i += 1
         self.create_bill(ordered_list, products)
 
-    
+    def add_new_item(self, product_name, unit_price, stock):
+        product = Products(product_name, unit_price)
+        product.manual_update_quantity(stock)
+        print("New item added")
+        print("\n")
 
+    def task_2(self):
+        print("Add new item")
 
-        
+        while True:
+            product_name = input("Enter product name : ")
+            unit_price = input("Enter unit price : LKR ")
+            stock = input("Enter uantity : ")
+            if ((product_name.isalpha()) and (unit_price.isdigit()) and (stock.isdigit())):
+                product_name = product_name
+                unit_price = int(unit_price)
+                stock = int(stock)
+                break
+            else:
+                print("Invalid input product name or unit price or quantity")
 
+        self.add_new_item(product_name, unit_price, stock)
 
-    
+    def update_add_stock(self, product_name, unit_price, stock):
+        product = Products(product_name, unit_price)
+        product.manual_update_quantity(stock)
+        print("Stock updated")
+        print("\n")
 
+    def update_remove_stock(self, product_name, unit_price, stock):
+        product = Products(product_name, unit_price)        
+        product.auto_update_quantity(stock)
+        print("Stock updated")
+        print("\n")
 
-        
+    def task_3(self):
+        print("Update Stock")
 
-    
+        while True:
+            product_name = input("Enter Product name : ")
+            unit_price = input("Enter unit price : LKR ")
+            stock = input("Enter quantity : ")
+            if ((product_name.isalpha()) and (unit_price.isdigit()) and (stock.isdigit())):
+                product_name = product_name
+                unit_price = int(unit_price)
+                stock = int(stock)
+                break
+            else:
+                print("Invalid input product name or unit price or quantity")
 
-
-
-sell_1 = SellerSection()
-p_p = sell_1.get_all_products()
-print(p_p)
+        self.update_add_stock(product_name, unit_price, stock)
