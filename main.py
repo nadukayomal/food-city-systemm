@@ -1,5 +1,5 @@
-
-
+from seller_section import SellerSection
+seller = SellerSection()
 
 print("####----------Welcome to Food city----------####")
 print("+-----Enter a number to access the system------+")
@@ -14,7 +14,8 @@ while True:
                 user_name = input("Enter the user name : ") # user name == seller123
                 password = input("Enter password : ") # password = sel12345
                 if user_name == "seller123" and password == "sel12345" :
-                    print("Log in success!")                
+                    print("Log in success!")
+                    seller.run()             
                     # run seller section
                     break
                 else:

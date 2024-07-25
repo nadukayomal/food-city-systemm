@@ -1,0 +1,7 @@
+apple 70
+mango 100
+banana 170
+papaya 186
+berry 430
+BERRY 10
+melon 500

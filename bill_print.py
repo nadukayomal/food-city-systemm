@@ -22,7 +22,7 @@ class Bill:
         return sum(sub_total_list)
     
     def bill_print(self, paid_amount):
-        # self.bill_head()
+        self.bill_head()
         product_count = len(self.products)
         print("Name | Quantity | unit price | price")
         for value in range(product_count):

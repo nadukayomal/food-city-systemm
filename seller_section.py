@@ -16,11 +16,14 @@ class SellerSection:
             if number.isdigit():
                 number = int(number)
                 if (number == 1):
-                    print("Create new bill")
+                    # print("Create new bill")
+                    self.task_1()
                 elif (number == 2):
-                    print("Add new Item")
+                    # print("Add new Item")
+                    self.task_2()
                 elif (number == 3):
-                    print("Update Quantity")
+                    # print("Update Quantity")
+                    self.task_3()
                 elif (number == 4):
                     break
                 else:
@@ -116,9 +119,9 @@ class SellerSection:
         while True:
             product_name = input("Enter product name : ")
             unit_price = input("Enter unit price : LKR ")
-            stock = input("Enter uantity : ")
+            stock = input("Enter quantity : ")
             if ((product_name.isalpha()) and (unit_price.isdigit()) and (stock.isdigit())):
-                product_name = product_name
+                product_name = product_name.lower()
                 unit_price = int(unit_price)
                 stock = int(stock)
                 break
@@ -147,7 +150,7 @@ class SellerSection:
             unit_price = input("Enter unit price : LKR ")
             stock = input("Enter quantity : ")
             if ((product_name.isalpha()) and (unit_price.isdigit()) and (stock.isdigit())):
-                product_name = product_name
+                product_name = product_name.lower()
                 unit_price = int(unit_price)
                 stock = int(stock)
                 break

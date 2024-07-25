@@ -45,11 +45,12 @@ class Products:
         else:
             with open("_product_price.txt","r") as file_4:
                 for line in file_4:
-                    product,price = line.strip().split(" ")  
+                    # debug this error
+                    products,price = line.strip().split(" ")  
                     price_list.append(price)
           
         if (self.product_name in product_list):
-            with open("_product_quantity_list.txt",) as file_5:
+            with open("_product_quantity_list.txt","w") as file_5:
                 for i in range(len(product_list)-1):
                     file_5.write(product_list[i] + " " + str(quantity_list[i]) + "\n")
                 else:
@@ -60,7 +61,7 @@ class Products:
                     file_6.write(product_list[i] + " " + str(price_list[i]) + "\n")
                 else:
                     file_6.write(self.product_name + " " + str(self.unit_price))
-            with open("_product_quantity_list" , "w") as file_7:
+            with open("_product_quantity_list.txt" , "w") as file_7:
                 for i in range(len(product_list)):
                     file_7.write(product_list[i] + " " + str(quantity_list[i]) + "\n")
                 else:
